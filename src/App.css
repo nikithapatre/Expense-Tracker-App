@@ -1,38 +1,209 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+   box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    display: flex;
+    flex-direction: column;
+    background-color:black;
+    align-items: center;
+    justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h3{
+    font-family: 'PT Sans Narrow',sans-serif;
+    font-size: larger;
+    font-weight: 900;
+    color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header-title {
+text-align: center;
+font-size: 1.5rem;
+font-family: 'PT Sans Narrow',
+sans-serif;
+ color: white;
+margin: 100px 0 40px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.container{
+   margin: 30px auto;
+   width: 350px;
+   text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.balance{
+padding: 15px 0;
+font-family: 'Andada Pro', serif;
+ color: white;
+}
+
+.income-expense-container{
+        margin: 30px 0;
+        padding: 30px 25px 30px 25px;
+      display:flex;
+      font-size: large;
+      border: 1px solid black;
+ background-color: #F8F8FF;
+ box-shadow: cornsilk;
+      text-align: center;
+      justify-content: space-between;
+font-family: 'PT Sans Narrow',
+      sans-serif;
+        }
+
+.income{
+    font-size: large;
+  margin: 0 30px;
+  font-family: 'PT Sans Narrow',
+  sans-serif;
+  
+}
+
+.expense{
+    font-size: large;
+     margin: 0 30px;
+     font-family: 'PT Sans Narrow',
+     sans-serif;
+}
+
+.money-plus{
+    color: green;
+    padding-top: 5px;
+    font-size: larger;
+    font-family: 'Andada Pro',
+    serif;
+}
+
+.money-minus{
+    color: red;
+    padding-top: 5px;
+    font-size: larger;
+    font-family: 'Andada Pro',
+    serif;
+}
+
+.history{
+    margin-top: 50px ;
+   display: flex; 
+    font-family: 'Andada Pro',
+    serif;
+      position: relative;
+}
+
+.history::before{
+ content: " "; 
+ position: absolute;
+ border-bottom: 2px double white;
+ width: 350px;
+ height: 1.2rem;
+ color: white;
+ padding-bottom: 5px;
+}
+
+.list{
+    padding: 20px 0;
+      list-style-type: none;
+       margin-bottom: 10px;
+}
+
+.list li{
+    border: 1px solid black; 
+   justify-content: space-between;
+    background-color: #F8F8FF;
+    padding: 15px;
+   position: relative;
+   display: flex;
+   margin-top: 10px
+}
+
+.list li.plus{
+    border-right: 5px solid green;
+    font-family: 'Andada Pro',
+    serif;
+}
+
+.list li.minus{
+  border-right: 5px solid red;
+  font-family: 'Andada Pro',
+  serif;
+}
+
+.delete-btn{
+    cursor: pointer;
+    background-color: #e74c3c;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 2px 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.list li:hover .delete-btn{
+    opacity: 1;
+}
+
+.add-transaction {
+     margin: 50px 0;
+    border-bottom: 2px double white;
+    font-family: 'Andada Pro',
+    serif;
+}
+
+
+
+.form-control{
+   margin: 30px auto; 
+   display: grid; 
+   position: relative;
+}
+
+label{
+    font-size: large;
+    padding-bottom: 10px;
+    color: white;
+    font-family: 'PT Sans Narrow',
+    sans-serif;
+}
+
+.input-text{
+    padding: 15px 0;
+    text-align: center;
+}
+
+.input-num{
+     padding: 15px 0;
+     text-align: center;
+     font-family: 'Andada Pro',
+     serif;
+}
+
+.submit-btn{
+   padding: 15px 20px;
+   margin-top: 40px;
+     width: 350px;
+   border: 3px solid grey;
+   border-radius: 5%;
+   position: relative;
+   top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); 
+
+}
+
+.submit-btn:hover{
+color: white;
+background-color: black;
 }
